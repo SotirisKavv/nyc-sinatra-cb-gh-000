@@ -13,4 +13,9 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.find_by_id(params[:id])
     erb :'landmarks/show'
   end
+
+  get '/landmarks' do
+    @landmarks = Landmark.all
+    erb :'landmarks/index'
+  end
 end
