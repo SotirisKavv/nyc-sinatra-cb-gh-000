@@ -38,7 +38,7 @@ class FiguresController < ApplicationController
     if !params[:figure].keys.include?("title_ids")
       params[:figure]["title_ids"] = []
     end
-    if !params[:figure].keys.include?("landmarks_ids")
+    if !params[:figure].keys.include?("landmark_ids")
       params[:figure]["landmarks_ids"] = []
     end
     @figure = Figure.find(params[:id])
